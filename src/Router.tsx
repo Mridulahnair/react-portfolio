@@ -1,31 +1,31 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createHashRouter, RouterProvider, Navigate } from 'react-router-dom';
 import { AboutPage } from './pages/About.page';
 import { BlogPage } from './pages/Blog.page';
 import { GalleryPage } from './pages/Gallery.page';
 import { HomePage } from './pages/Home.page';
 import { WorkPage } from './pages/Work.page';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
-    path: '/react-portfolio',
+    path: '/',
     element: <HomePage />,
   },
   {
-    path: '/react-portfolio/about',
+    path: '/about',
     element: <AboutPage />,
   },
   {
-    path: '/react-portfolio/work',
+    path: '/work',
     element: <WorkPage />,
   },
   {
-    path: '/react-portfolio/gallery',
+    path: '/gallery',
     element: <GalleryPage />,
   },
   {
-    path: '/react-portfolio/blog',
+    path: '/blog',
     element: <BlogPage />,
-  },
+  }
 ]);
 
 export function Router() {

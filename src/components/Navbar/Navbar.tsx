@@ -4,10 +4,10 @@ import { useDisclosure } from '@mantine/hooks';
 import classes from './Navbar.module.css';
 
 const links = [
-  { link: '/react-portfolio/about', label: 'About' },
-  { link: '/react-portfolio/work', label: 'Work' },
-  { link: '/react-portfolio/gallery', label: 'Gallery' },
-  { link: '/react-portfolio/blog', label: 'Blog' },
+  { link: '/react-portfolio/#about', label: 'About' },
+  { link: '/react-portfolio/#work', label: 'Work' },
+  { link: '/react-portfolio/#gallery', label: 'Gallery' },
+  { link: '/react-portfolio/#blog', label: 'Blog' },
 ];
 
 export function Navbar() {
@@ -32,7 +32,7 @@ export function Navbar() {
   return (
     <header className={classes.header}>
       <Container size="md" className={classes.inner}>
-        <a href="/react-portfolio">
+        <a href="/react-portfolio/#">
           <Image
             radius="md"
             h={45}
