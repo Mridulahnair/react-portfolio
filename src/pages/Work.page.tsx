@@ -1,12 +1,10 @@
-
-import { Work } from '@/components/Work/Work';
-
+import { Work } from '../components/Work/Work';
 
 export function WorkPage() {
   return (
     <>
-    {/* todo: add body / content */}
-    <Work/>
+      {/* todo: add body / content */}
+      <Work />
     </>
   );
 }

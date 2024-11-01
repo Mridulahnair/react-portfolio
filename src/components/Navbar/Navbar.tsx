@@ -1,14 +1,13 @@
 import { useState } from 'react';
-import { Container, Group, Burger } from '@mantine/core';
+import { Burger, Container, Group, Image } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { Image } from '@mantine/core';
 import classes from './Navbar.module.css';
 
 const links = [
-  { link: '/about', label: 'About' },
-  { link: '/work', label: 'Work' },
-  { link: '/gallery', label: 'Gallery' },
-  { link: '/blog', label: 'Blog' },
+  { link: '/react-portfolio/about', label: 'About' },
+  { link: '/react-portfolio/work', label: 'Work' },
+  { link: '/react-portfolio/gallery', label: 'Gallery' },
+  { link: '/react-portfolio/blog', label: 'Blog' },
 ];
 
 export function Navbar() {
@@ -33,7 +32,7 @@ export function Navbar() {
   return (
     <header className={classes.header}>
       <Container size="md" className={classes.inner}>
-        <a href="/">
+        <a href="/react-portfolio">
           <Image
             radius="md"
             h={45}

@@ -1,13 +1,17 @@
 import '@mantine/core/styles.css';
 
 import { MantineProvider } from '@mantine/core';
-import { AppRouter } from './Router';
+import { Footer } from './components/Footer/Footer';
+import { Navbar } from './components/Navbar/Navbar';
+import { Router } from './Router';
 import { theme } from './theme';
 
 export default function App() {
   return (
     <MantineProvider theme={theme}>
-      <AppRouter />
+      <Navbar />
+      <Router />
+      <Footer />
     </MantineProvider>
   );
 }

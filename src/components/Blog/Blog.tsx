@@ -1,4 +1,4 @@
-import { Overlay, Container, Title, Button, Text } from '@mantine/core';
+import { Button, Container, Overlay, Text, Title } from '@mantine/core';
 import classes from './Blog.module.css';
 
 export function Blog() {
@@ -11,8 +11,6 @@ export function Blog() {
       />
       <Container className={classes.container} size="md">
         <Title className={classes.title}>A fully featured React components library</Title>
-        
-
       </Container>
     </div>
   );

@@ -1,6 +1,5 @@
-import { Image, Container, Title, Button, Group, Text, List, ThemeIcon, rem } from '@mantine/core';
-import { IconCheck } from '@tabler/icons-react';
-import image from '../../assets/Passion.jpg';
+import { Button, Container, Group, Image, Text, Title } from '@mantine/core';
+import image from '../../assets/hero.jpg';
 import classes from './Hero.module.css';
 
 export function Hero() {
@@ -15,7 +14,6 @@ export function Hero() {
             Build fully functional accessible web applications faster than ever – Mantine includes
             more than 120 customizable components and hooks to cover you in any situation
           </Text>
-
 
           <Group mt={30}>
             <Button radius="xl" size="md" className={classes.control}>

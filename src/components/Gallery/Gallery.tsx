@@ -1,12 +1,13 @@
-// import { Image, Container, Title, Button, Group, Text, List, ThemeIcon, rem } from '@mantine/core';
-// import { IconCheck } from '@tabler/icons-react';
-// import image from '../../assets/Passion.jpg';
-// import classes from './About.module.css';
+import { Container, Image } from '@mantine/core';
+import image from '../../assets/underconst.jpg';
+import classes from './Gallery.module.css';
 
 export function Gallery() {
-    return (
-      <>
-      </>
-      
-    );
-  }
+  return (
+    <>
+      <Container className={classes.root}>
+        <Image src={image} radius="md" />
+      </Container>
+    </>
+  );
+}

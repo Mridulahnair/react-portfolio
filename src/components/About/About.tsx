@@ -1,6 +1,5 @@
-
-import { Image, Accordion, Grid, Container, Title } from '@mantine/core';
-import image from '../../assets/Headshot.jpg';
+import { Accordion, Container, Grid, Image, Title } from '@mantine/core';
+import image from '../../assets/headshot.jpg';
 import classes from './About.module.css';
 
 const placeholder =

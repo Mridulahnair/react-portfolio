@@ -1,7 +1,20 @@
-import { Container,Text , Group, ActionIcon, rem, useMantineColorScheme, Switch } from '@mantine/core';
-import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram, IconSun, IconMoon } from '@tabler/icons-react';
+import {
+  IconBrandInstagram,
+  IconBrandTwitter,
+  IconBrandYoutube,
+  IconMoon,
+  IconSun,
+} from '@tabler/icons-react';
+import {
+  ActionIcon,
+  Container,
+  Group,
+  rem,
+  Switch,
+  Text,
+  useMantineColorScheme,
+} from '@mantine/core';
 import classes from './Footer.module.css';
-
 
 export function Footer() {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();

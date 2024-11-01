@@ -1,25 +1,33 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HomePage } from './pages/Home.page';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { AboutPage } from './pages/About.page';
-import { WorkPage } from './pages/Work.page';
 import { BlogPage } from './pages/Blog.page';
 import { GalleryPage } from './pages/Gallery.page';
+import { HomePage } from './pages/Home.page';
+import { WorkPage } from './pages/Work.page';
 
-import { Navbar } from './components/Navbar/Navbar';
-import { Footer } from './components/Footer/Footer';
+const router = createBrowserRouter([
+  {
+    path: '/react-portfolio',
+    element: <HomePage />,
+  },
+  {
+    path: '/react-portfolio/about',
+    element: <AboutPage />,
+  },
+  {
+    path: '/react-portfolio/work',
+    element: <WorkPage />,
+  },
+  {
+    path: '/react-portfolio/gallery',
+    element: <GalleryPage />,
+  },
+  {
+    path: '/react-portfolio/blog',
+    element: <BlogPage />,
+  },
+]);
 
-export function AppRouter() {
-  return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/work" element={<WorkPage />} />
-        <Route path="/blog" element={<BlogPage />} />
-        <Route path="/gallery" element={<GalleryPage />} />
-      </Routes>
-      <Footer />
-    </Router>
-  );
+export function Router() {
+  return <RouterProvider router={router} />;
 }

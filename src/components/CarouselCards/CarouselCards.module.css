@@ -6,6 +6,7 @@
   align-items: flex-start;
   background-size: cover;
   background-position: center;
+  margin-right: calc(var(--mantine-spacing-lg) * 0.5);
 }
 
 .title {
