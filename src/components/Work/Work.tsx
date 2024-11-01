@@ -12,36 +12,36 @@ interface ArticleProps {
 
 const mockdata: ArticleProps[] = [
   {
-    title: 'Top 10 places to visit in Norway this summer',
+    title: "TravelBuddy: Streamlined Trip Planning Interface",
     image:
       'https://images.unsplash.com/photo-1527004013197-933c4bb611b3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=720&q=80',
     date: 'August 18, 2022',
     content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      'TravelBuddy is an intuitive app designed to simplify the trip planning process for travelers. It features an easy-to-use interface that allows users to search for destinations, create itineraries, and book accommodations all in one place. With personalized recommendations and collaborative tools, users can share plans with friends and family, enhancing the travel experience. This project aims to make trip planning enjoyable and efficient, ensuring users can focus on creating lasting memories.',
   },
   {
-    title: 'Best forests to visit in North America',
+    title: "BookShelf: Simplifying Library Management Systems",
     image:
-      'https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=720&q=80',
+      'https://www.princeton.edu/sites/default/files/styles/1x_full_2x_half_crop/public/images/2017/12/20170509_Eng_Library_DJA_012_3.jpg?itok=-WaXTWX8',
     date: 'August 27, 2022',
     content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      'BookShelf is a user-friendly platform designed to enhance library management for both patrons and librarians. It features intuitive search functionality, user profiles for tracking borrowing history, and efficient inventory management tools. With a responsive design, it ensures accessibility across devices, promoting community engagement through book reviews and recommendations. This project streamlines library operations, making it easier for users to discover and manage resources.',
   },
   {
-    title: 'Hawaii beaches review: better than you think',
+    title: "RecipeMaster: User-Friendly Cooking App",
     image:
-      'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=720&q=80',
+      'https://cdn.dribbble.com/userupload/16047322/file/original-e56ae8253ef41505debc65cbe9d549a3.png?resize=752x',
     date: 'September 9, 2022',
     content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      'RecipeMaster is a cooking app designed to make meal preparation enjoyable and accessible for everyone. It features a simple interface that allows users to browse a wide range of recipes, customize meal plans, and generate shopping lists with ease. Users can also save their favorite recipes and share cooking tips with a community of food enthusiasts. This project aims to inspire home cooks by providing a seamless and engaging cooking experience, transforming the way users interact with their culinary adventures.',
   },
   {
-    title: 'Mountains at night: 12 best locations to enjoy the view',
+    title: "EduConnect: Enhancing Student Engagement in Learning Platforms",
     image:
-      'https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=720&q=80',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMujyFEIU3X5sjwYDZryQIvJbfZi_grD-0LA&s',
     date: 'September 12, 2022',
     content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      'EduConnect is a dynamic learning platform designed to foster student engagement through interactive features and collaborative tools. It includes discussion forums, live Q&A sessions, and gamified learning activities that encourage participation and enhance the learning experience. With personalized content recommendations and progress tracking, students can take ownership of their education. This project aims to create a vibrant online learning community, making education more engaging and accessible for all learners..',
   },
 ];
 

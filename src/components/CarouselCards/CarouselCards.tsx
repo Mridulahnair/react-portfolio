@@ -6,6 +6,9 @@ import { useState } from 'react';
 import { Button, Container, Modal, Paper, rem, Text, Title, useMantineTheme } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import classes from './CarouselCards.module.css';
+import headshot from '../../assets/headshot.jpg';
+import dramatic from '../../assets/dramatic.jpg';
+import hero from '../../assets/hero.jpg';
 
 interface CardProps {
   image: string;
@@ -35,16 +38,16 @@ function Card({ image, title, category, content }: CardProps) {
           </Title>
         </div>
         <Button variant="white" color="dark" onClick={() => setOpened(true)}>
-          Read article
+          Behind It
         </Button>
       </Paper>
 
-      <Modal opened={opened} onClose={() => setOpened(false)} size="lg">
+      <Modal opened={opened} onClose={() => setOpened(false)} size="45rem">
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           <img
             src={image}
             alt={title}
-            style={{ width: '100%', maxHeight: '200px', objectFit: 'cover', marginBottom: '1rem' }}
+            style={{ width: 'auto', maxHeight: '700px', margin: '1rem', maxWidth: '600px' }}
           />
           <Title order={2} style={{ marginBottom: '1rem', fontWeight: 700, fontSize: '1.5rem' }}>
             {title}
@@ -60,53 +63,27 @@ function Card({ image, title, category, content }: CardProps) {
 
 const data = [
   {
-    image:
-      'https://images.unsplash.com/photo-1508193638397-1c4234db14d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
-    title: 'Best forests to visit in North America',
-    category: 'nature',
+    image: headshot,
+    title: 'Business type Head Shot',
+    category: 'photograpghy',
     content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      'In this “professional type headshot” I decided to go with a crossed arm pose with face slightly tilted towards the light to convey confidence and openness making it a well-suited picture for formal use for professional branding on a website for instance.  I used a fixed focal length of 24mm, which isn’t usually the first choice for a headshot, but I opted for it to capture a wider frame and show a bit more movement. I wanted a photo that felt natural and relaxed, while still maintaining a formal tone, rather than a traditional headshot.The aperture was set to f/1.8 to let in as much light as possible, given that this photo was taken indoors in a low-light setting. The shutter speed used was 1/10s—a slower speed to allow more light to enter. Additionally, I set the ISO to 100 to keep the image sharp and clear, despite the limited lighting ',
   },
   {
-    image:
-      'https://images.unsplash.com/photo-1559494007-9f5847c49d94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
-    title: 'Hawaii beaches review: better than you think',
-    category: 'beach',
+    image: dramatic,
+    title: 'Aesthetic shot with a bit of Drama ',
+    category: 'photography',
     content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      'In this portrait, I framed the scene with a focus on the play between light and shadows, using my phone\'s flashlight to create an intense dramatic vibe. I went with a 35 mm focal length to capture more of the scene. I picked an aperture of f/2.5 because I wanted the subject (myself) to be sharp while the background softly blurred out ( further blur was taken care while editing the image. With a shutter speed of 1/15 seconds, I got just the right amount of light in, and keeping the ISO at 160 helped keep the noise down and the photo nice and sharp',
   },
   {
-    image:
-      'https://images.unsplash.com/photo-1608481337062-4093bf3ed404?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
-    title: 'Mountains at night: 12 best locations to enjoy the view',
-    category: 'nature',
+    image: hero,
+    title: 'Passionate Perspectives',
+    category: 'Photography',
     content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      'I absolutely love being outdoors with a book in hand. There’s something magical about lying on the grass, where the warmth wraps around me and the scent of nature fills the air—even if I have to wear a jacket because it’s cold here in Ireland. That’s precisely what this photo captures: me in my most comfortable self. The image was taken with a focal length of 24 mm, which allowed for a wider view, bringing the surrounding grass into the frame and making it easier to connect me with my environment. The aperture was set to f/3.2, keeping my eyes in focus while gently blurring the grass around me, creating a sense of infinity as it expands outwards. I also used a shutter speed of 1/40 seconds, which was ideal for this situation since it ensured enough light entered the frame, even on a cloudy day.',
   },
-  {
-    image:
-      'https://images.unsplash.com/photo-1507272931001-fc06c17e4f43?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
-    title: 'Aurora in Norway: when to visit for best experience',
-    category: 'nature',
-    content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-  },
-  {
-    image:
-      'https://images.unsplash.com/photo-1510798831971-661eb04b3739?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
-    title: 'Best places to visit this winter',
-    category: 'tourism',
-    content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-  },
-  {
-    image:
-      'https://images.unsplash.com/photo-1582721478779-0ae163c05a60?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
-    title: 'Active volcanos reviews: travel at your own risk',
-    category: 'nature',
-    content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-  },
+  
 ];
 
 export function CarouselCards() {

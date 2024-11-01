@@ -22,7 +22,7 @@ export function Footer() {
     <div className={classes.footer}>
       <Container className={classes.inner}>
         <Text c="dimmed" size="sm">
-          © 2020 mantine.dev. All rights reserved.
+          © mridula haridasan. All rights reserved.
         </Text>
         <Group gap={0} className={classes.links} justify="flex-end" wrap="nowrap">
           <ActionIcon size="lg" color="gray" variant="subtle" onClick={() => toggleColorScheme()}>

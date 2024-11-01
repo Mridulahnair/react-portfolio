@@ -8,21 +8,20 @@ export function Hero() {
       <div className={classes.inner}>
         <div className={classes.content}>
           <Title className={classes.title}>
-            A <span className={classes.highlight}>modern</span> React <br /> components library
+           Mridula Haridasan  
           </Title>
           <Text c="dimmed" mt="md">
-            Build fully functional accessible web applications faster than ever – Mantine includes
-            more than 120 customizable components and hooks to cover you in any situation
+          Dive in to see my journey, projects, and what inspires me. Whether you're curious about my work or just exploring, I hope you find something here that resonates with you
           </Text>
 
-          <Group mt={30}>
+          {/* <Group mt={30}>
             <Button radius="xl" size="md" className={classes.control}>
               Get started
             </Button>
             <Button variant="default" radius="xl" size="md" className={classes.control}>
               Source code
             </Button>
-          </Group>
+          </Group> */}
         </div>
         <Image src={image} className={classes.image} />
       </div>
