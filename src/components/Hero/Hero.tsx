@@ -7,23 +7,26 @@ export function Hero() {
     <Container size="md">
       <div className={classes.inner}>
         <div className={classes.content}>
-          <Title className={classes.title}>
-           Mridula Haridasan  
-          </Title>
-          <Text c="dimmed" mt="md">
+            <Title className={classes.title}>
+            Mridula is an annyoing person 
+            who is always in search of something new.
+            </Title>
+          
+            <hr style={{ width: '50%', margin: '20px 0', border: '1px solid #ccc' }} />
+          
+          <Text className={classes.subtitle} c="dimmed" mt="md">
           Dive in to see my journey, projects, and what inspires me. Whether you're curious about my work or just exploring, I hope you find something here that resonates with you
           </Text>
 
-          {/* <Group mt={30}>
-            <Button radius="xl" size="md" className={classes.control}>
-              Get started
+          <Group mt={30}>
+            <Button radius="xl" size="md" className={classes.control} component="a" href="/react-portfolio/#contact">
+              Contact me
             </Button>
-            <Button variant="default" radius="xl" size="md" className={classes.control}>
-              Source code
-            </Button>
-          </Group> */}
+          </Group>
         </div>
-        <Image src={image} className={classes.image} />
+        <div className={classes.imageDiv}>
+          <Image src={image} className={classes.image} />
+        </div>
       </div>
     </Container>
   );

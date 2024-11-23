@@ -4,6 +4,7 @@ import { BlogPage } from './pages/Blog.page';
 import { GalleryPage } from './pages/Gallery.page';
 import { HomePage } from './pages/Home.page';
 import { WorkPage } from './pages/Work.page';
+import { ContactPage } from './pages/Contact.page';
 
 const router = createHashRouter([
   {
@@ -19,11 +20,15 @@ const router = createHashRouter([
     element: <WorkPage />,
   },
   {
+    path: '/contact',
+    element: <ContactPage />,
+  },
+  {
     path: '/gallery',
     element: <GalleryPage />,
   },
   {
-    path: '/blog',
+    path: '/blog/:slug',
     element: <BlogPage />,
   }
 ]);

@@ -1,52 +1,107 @@
 .inner {
-    display: flex;
-    justify-content: space-between;
-    padding-top: calc(var(--mantine-spacing-xl) * 4);
-    padding-bottom: calc(var(--mantine-spacing-xl) * 4);
+  display: flex;
+  justify-content: right;
+  padding-top: calc(var(--mantine-spacing-xl) * 4);
+  padding-bottom: calc(var(--mantine-spacing-xl) * 4);
+}
+
+.content {
+  position: absolute;
+  max-width: rem(680px);
+  margin-right: calc(var(--mantine-spacing-xl) * 3);
+
+  top: 30%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white; /* Ensure the text is visible over the image */
+  z-index: 1;
+
+
+  @media (max-width: $mantine-breakpoint-md) {
+    max-width: 100%;
+    margin-right: 0;
   }
-  
-  .content {
-    max-width: rem(480px);
-    margin-right: calc(var(--mantine-spacing-xl) * 3);
-  
-    @media (max-width: $mantine-breakpoint-md) {
-      max-width: 100%;
-      margin-right: 0;
-    }
+}
+
+.title {
+  color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+  font-family:
+    Greycliff CF,
+    var(--mantine-font-family);
+  font-size: rem(44px);
+  line-height: 1.2;
+  font-weight: 900;
+  text-align: left;
+  text-shadow: 2px 2px 4px rgba(91, 90, 90, 0.5); /* Adding shadow to the text */
+  z-index: 2; /* Ensuring the text is above other elements */
+  animation: slide-in 1.5s forwards; /* Adding animation */
+
+  @media (max-width: $mantine-breakpoint-xs) {
+    font-size: rem(28px);
   }
-  
-  .title {
-    color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
-    font-family:
-      Greycliff CF,
-      var(--mantine-font-family);
-    font-size: rem(44px);
-    line-height: 1.2;
-    font-weight: 900;
-  
-    @media (max-width: $mantine-breakpoint-xs) {
-      font-size: rem(28px);
-    }
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-15%);
   }
-  
-  .control {
-    @media (max-width: $mantine-breakpoint-xs) {
-      flex: 1;
-    }
+  to {
+    transform: translateX(0);
   }
-  
-  .image {
-    width: rem(376px);
-    height: rem(356px);
-  
-    @media (max-width: $mantine-breakpoint-md) {
-      display: none;
-    }
+}
+
+@keyframes slide-out {
+  from {
+    transform: translateX(15%);
   }
-  
-  .highlight {
-    position: relative;
-    background-color: var(--mantine-color-blue-light);
-    border-radius: var(--mantine-radius-sm);
-    padding: rem(4px) rem(12px);
+  to {
+    transform: translateX(0);
   }
+}
+
+.subtitle {
+  max-width: rem(470px);
+  text-align: left;
+
+  animation: slide-out 1.5s backwards; /* Adding animation */
+}
+
+.control {
+  @media (max-width: $mantine-breakpoint-xs) {
+    flex: 1;
+  }
+}
+
+.imageDiv {
+  float: right;
+}
+
+.image {
+  width: rem(600px);
+  border: 2px solid rgba(255, 255, 255, 0.2); /* Subtle border to blend with the background */
+  border-radius: var(--mantine-radius-md); /* Rounded corners for a softer look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for a subtle depth effect */
+
+  @media (max-width: $mantine-breakpoint-md) {
+    display: none;
+  }
+
+  animation: zoom-out 1.5s forwards; /* Adding animation */
+}
+
+@keyframes zoom-out {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.highlight {
+  position: relative;
+  background-color: var(--mantine-color-blue-light);
+  border-radius: var(--mantine-radius-sm);
+  padding: rem(4px) rem(12px);
+}

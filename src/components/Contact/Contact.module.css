@@ -1,0 +1,4 @@
+.container {
+    margin-top: var(--mantine-spacing-xl);
+    padding-bottom: calc(var(--mantine-spacing-xl) * 2);
+}

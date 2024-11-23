@@ -5,9 +5,9 @@ import classes from './Navbar.module.css';
 
 const links = [
   { link: '/react-portfolio/#about', label: 'About' },
-  { link: '/react-portfolio/#work', label: 'Work' },
+  { link: '/react-portfolio/#work', label: 'Blog' },
   { link: '/react-portfolio/#gallery', label: 'Gallery' },
-  { link: '/react-portfolio/#blog', label: 'Blog' },
+  { link: '/react-portfolio/#contact', label: 'Contact' },
 ];
 
 export function Navbar() {
