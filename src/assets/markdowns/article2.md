@@ -1,3 +1,7 @@
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
 # Crafting a Product Video 
 
 Creating a product video or any video for that matter is an intricate process that demands proactive detailed planning, creativity and technical skills . As part of our academic journey, we were guided through a cinematography lab session by our course instructor, which laid the foundation for the video production assignment which was achieved as a team that followed. 
@@ -14,7 +18,7 @@ Here are some pictures capturing the moments when we were immersed in these exer
 
 *4 images*
 
-![Image 1](https://github.com/Mridulahnair/react-portfolio/blob/main/src/assets/Headshot.jpg?raw=true)
+![Image 1](https://github.com/Mridulahnair/react-portfolio/blob/main/src/assets/1.jpeg?raw=true)
 
 In the pre-production phase, the first thing we had to figure out was what exactly we wanted from our video. So, we got together, did some brainstorming, and dove into a rabbit hole of product videos online to set clear expectations. Each of us picked a few videos we liked, had a proper discussion about them, and finally landed on the idea of creating a product video for a multi-utility bag. It felt like the perfect choice—practical, versatile, and something we could really bring to life. Then came the next step.
 
