@@ -1,71 +1,49 @@
-<h1 align="center">Awesome GitHub Profile README
-<a href="https://www.producthunt.com/posts/awesome-github-profiles?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-awesome-github-profiles" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=277987&theme=light" alt="Awesome GitHub Profiles - Best curated list of developers readme, updated every 15 min | Product Hunt" style="width: 200px; height: 44px;" width="200" height="44" /></a></h1>
-<div align="center">
-<img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" alt="Awesome Badge"/>
-<a href="https://arbeitnow.com/?utm_source=awesome-github-profile-readme"><img src="https://img.shields.io/static/v1?label=&labelColor=505050&message=arbeitnow&color=%230076D6&style=flat&logo=google-chrome&logoColor=%230076D6" alt="website"/></a>
-<!-- <img src="http://hits.dwyl.com/abhisheknaiidu/awesome-github-profile-readme.svg" alt="Hits Badge"/> -->
-<img src="https://img.shields.io/static/v1?label=%F0%9F%8C%9F&message=If%20Useful&style=style=flat&color=BC4E99" alt="Star Badge"/>
-<a href="https://discord.gg/XTW52Kt"><img src="https://img.shields.io/discord/733027681184251937.svg?style=flat&label=Join%20Community&color=7289DA" alt="Join Community Badge"/></a>
-<a href="https://twitter.com/abhisheknaiidu" ><img src="https://img.shields.io/twitter/follow/abhisheknaiidu.svg?style=social" /> </a>
-<br>
+# Crafting a Product Video 
 
-<i>A curated list of awesome Github Profile READMEs</i>
+Creating a product video or any video for that matter is an intricate process that demands proactive detailed planning, creativity and technical skills . As part of our academic journey, we were guided through a cinematography lab session by our course instructor, which laid the foundation for the video production assignment which was achieved as a team that followed. 
 
-<a href="https://github.com/abhisheknaiidu/awesome-github-profile-readme/stargazers"><img src="https://img.shields.io/github/stars/abhisheknaiidu/awesome-github-profile-readme" alt="Stars Badge"/></a>
-<a href="https://github.com/abhisheknaiidu/awesome-github-profile-readme/network/members"><img src="https://img.shields.io/github/forks/abhisheknaiidu/awesome-github-profile-readme" alt="Forks Badge"/></a>
-<a href="https://github.com/abhisheknaiidu/awesome-github-profile-readme/pulls"><img src="https://img.shields.io/github/issues-pr/abhisheknaiidu/awesome-github-profile-readme" alt="Pull Requests Badge"/></a>
-<a href="https://github.com/abhisheknaiidu/awesome-github-profile-readme/issues"><img src="https://img.shields.io/github/issues/abhisheknaiidu/awesome-github-profile-readme" alt="Issues Badge"/></a>
-<a href="https://github.com/abhisheknaiidu/awesome-github-profile-readme/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/abhisheknaiidu/awesome-github-profile-readme?color=2b9348"></a>
-<a href="https://github.com/abhisheknaiidu/awesome-github-profile-readme/blob/master/LICENSE"><img src="https://img.shields.io/github/license/abhisheknaiidu/awesome-github-profile-readme?color=2b9348" alt="License Badge"/></a>
+## The Cinematography Lab Session
 
-<img alt="Awesome GitHub Profile Readme" src="assets/agpr.gif"> </img>
+In preparation for the product video project, we as a team participated in a hands-on lab session under the guidance of our course instructor. This session included two key activities that helped us dive into the basics of filmmaking techniques and gave us the opportunity to practice while also understanding how each team member contributes to the overall success of the shoot.
 
-<i>Loved the project? Please consider [donating](https://paypal.me/abhisheknaiidu) to help it improve!</i>
+1. Replicating a conversation scene 
+One of the exercises was to recreate a scene (the framing) inspired by a scene from the movie Out of Sight featuring Jennifer Lopez and George Clooney. This taught us the importance of camera angles, framing, and the importance of lighting and shadows. It was a perfect example of how camera placement and actor positioning are essential to conveying the intended dynamics.
+2. Capturing a continuous walking shot of a person walking through three sets of winding stairs. This exercise emphasized the importance of movement, timing and maintaining continuity in takes . The technical aspects such as pacing camera positioning and following the subject smoothly taught us how even the simplest shots required precision.
+We saw firsthand how essential it is to have a director to guide the vision, a cinematographer to bring it to life visually, a sound technician to ensure the audio is just right, and a continuity expert to keep everything aligned. These exercises gave us a solid foundation for understanding how each person’s role contributes to a successful shoot.
+Here are some pictures capturing the moments when we were immersed in these exercises. These snapshots highlight the teamwork, creativity, and focus that went into understanding the fundamentals
 
-</div>
+*4 images*
 
-### Contents:
-- [Categories](#categories)
-    - [GitHub Actions 🤖](#github-actions-)
-    - [Game Mode 🚀](#game-mode-)
-    - [Code Mode 👨🏽‍💻](#code-mode-)
-    - [Dynamic Realtime 💫](#dynamic-realtime-)
-    - [A Little Bit of Everything 😃](#a-little-bit-of-everything-)
-    - [Descriptive 🗒](#descriptive-)
-    - [Simple but Innovative Ones 🤗](#simple-but-innovative-ones-)
-    - [Typing.. Mode 🎰](#typing-mode-)
-    - [Anime 👾](#anime-)
-    - [Minimalistic ✨](#minimalistic-)
-    - [GIFS 👻](#gifs-)
-    - [Just Images 🎭](#just-images-)
-    - [Badges 🎫](#badges-)
-    - [Fancy Fonts 🖋](#fancy-fonts-)
-    - [Icons 🎯](#icons-)
-    - [Retro 😎](#retro-)
-- [Tools](#tools)
-- [Articles](#articles)
-- [Tutorials](#tutorials)
-- [Contribute](#contribute)
-- [Special Thanks 🙇](#special-thanks-)
-- [License](#license)
+![Image 1](https://github.com/Mridulahnair/react-portfolio/blob/main/src/assets/Headshot.jpg?raw=true)
 
-## Tutorials
-- ["Create Impressive GitHub Portfolio"](https://www.youtube.com/watch?v=dkE4mVhwMB4) - *MTECHVIRAL*
-- ["How To Create a Github Profile ReadMe"](https://www.youtube.com/watch?v=DOiGs2NiDbU) - *James Q Quick*
-- ["How to create a GitHub profile README"](https://www.youtube.com/watch?v=vND_UY7xk24) - *Code With Confidence*
-- ["How To Create A GitHub Profile README"](https://www.youtube.com/watch?v=Y1z7_GfEPiE) - *Program With Erik*
-- ["Next Level GitHub Profile README"](https://youtu.be/ECuqb5Tv9qI) - *codeSTACKr*
+In the pre-production phase, the first thing we had to figure out was what exactly we wanted from our video. So, we got together, did some brainstorming, and dove into a rabbit hole of product videos online to set clear expectations. Each of us picked a few videos we liked, had a proper discussion about them, and finally landed on the idea of creating a product video for a multi-utility bag. It felt like the perfect choice—practical, versatile, and something we could really bring to life. Then came the next step.
 
-## Contribute
 
-Contributions are always welcome!
-Please read the [contribution guidelines](contributing.md) first.
+## Storyboarding and Concept Development  
 
-## Special Thanks 🙇
-- [Zetao Zhuang](https://github.com/zzetao) for making the amazing site for this repo!
+![Placeholder Image 2](https://github.com/Mridulahnair/react-portfolio/blob/main/src/assets/dramatic.jpg?raw=true)
 
-## License
+Here our aim was to outline the narrative and decide on the scenes and frames which would best showcase our bag and its features and came up with a rough sketch of a shot list like template ( basically a storyboard ).
+Here is the rough framework and storyboard we developed after referencing a few videos for inspiration. We decided to follow this structure for our shoot. According to the finalized storyboard, we scheduled two shooting sessions for the week:
+1.	Outdoor Shoot: To highlight the versatility of the bag in the context of movement, travel, and dynamic use cases.
+2.	Indoor Shoot: Focused on showcasing the bag’s features in detail, emphasizing its functionality and design.
 
-[![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
+The next step was to source the necessary equipment for the shoot. This included a bag, items to place inside the bag, additional lighting, a tripod stand, and a camera (in our case, a mobile camera). Alongside this, we also planned and carried out location scouting to finalize suitable shooting spots.
 
-To the extent possible under law, [Abhishek Naidu](https://abhisheknaidu.tech/) has waived all copyright and related or neighboring rights to this work.
+During production, my main role was handling sound. Since we opted for a fast-paced soundtrack instead of live audio, I got an opportunity to assist the team wherever required. Framing, managing props and screens, and ensuring setups aligned with the storyboard. This allowed me to contribute to various aspects of the shoot while maintaining focus on the sound design for the final edit. Here are some pictures from our video production session. 
+
+*2 images *
+
+Next step
+
+Post-Production:
+In the editing phase we had to go through all the vides and pick out the final takes and Decide on its sequences and cut that would help with the narration.
+My role: As the sound in charge for our video production, my responsibilities shifted from traditional on-set audio recording to selecting and curating the perfect soundtrack. Since the final video didn’t include live audio or dialogue, my focus was on finding a fast-paced track that matched the energy and flow of the visuals.
+It was essential to ensure that the soundtrack aligned with the narrative and pacing of the video while ensuring that the transitions and beats complemented the cuts and movements in the footage. We created a fast-paced video showcasing the bag and its users’ dynamic activities, so the music needed to be upbeat and perfectly suited to the theme.
+
+This assignment was a perfect blend of creativity and technical application. The hands-on experience in the cinematography lab and the actual production process deepened our understanding of filmmaking
+The happy team at the end of a shoot day just before the word pack up! 😊
+
+
+*Image *
+

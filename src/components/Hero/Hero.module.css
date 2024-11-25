@@ -10,7 +10,7 @@
   max-width: rem(680px);
   margin-right: calc(var(--mantine-spacing-xl) * 3);
 
-  top: 30%;
+  top: 60%;
   left: 40%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -35,7 +35,7 @@
   text-align: left;
   text-shadow: 2px 2px 4px rgba(91, 90, 90, 0.5); /* Adding shadow to the text */
   z-index: 2; /* Ensuring the text is above other elements */
-  animation: slide-in 1.5s forwards; /* Adding animation */
+  animation: slide-in 3s forwards; /* Adding animation */
 
   @media (max-width: $mantine-breakpoint-xs) {
     font-size: rem(28px);

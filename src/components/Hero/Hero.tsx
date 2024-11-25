@@ -8,11 +8,11 @@ export function Hero() {
       <div className={classes.inner}>
         <div className={classes.content}>
             <Title className={classes.title}>
-            Mridula is an annyoing person 
-            who is always in search of something new.
+            Mridula is an Interaction designer inspired by
+            functional designs that highlight human experience 
             </Title>
           
-            <hr style={{ width: '50%', margin: '20px 0', border: '1px solid #ccc' }} />
+            <hr style={{ width: '50%', margin: '10px 0', border: '1px solid #ccc' }} />
           
           <Text className={classes.subtitle} c="dimmed" mt="md">
           Dive in to see my journey, projects, and what inspires me. Whether you're curious about my work or just exploring, I hope you find something here that resonates with you
