@@ -1,16 +1,33 @@
-name: Build and Deploy
+name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - main # Replace 'main' with your default branch name if it's different
 
 jobs:
-  build:
-
+  deploy:
     runs-on: ubuntu-latest
-    
-    steps:
-    - uses: actions/checkout@v3
 
-    - name: Build and Deploy React app to GitHub Pages
-      uses: omkartapale/react-deployment-gh-pages@v1.0.0
+    steps:
+    # Step 1: Checkout the code
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    # Step 2: Set up Node.js
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 20 # Use the Node.js version specified in your project
+
+    # Step 3: Install dependencies
+    - name: Install dependencies
+      run: npm install
+
+    # Step 4: Build the project
+    - name: Build the project
+      run: npm run build
+
+    # Step 5: Deploy to GitHub Pages
+    - name: Deploy to GitHub Pages
+      run: npm run deploy 
