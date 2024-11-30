@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import ReactMarkdown from 'react-markdown';
-import rehypeRaw from 'rehype-raw';
 import { useParams } from 'react-router-dom';
 import {
     Avatar,
@@ -22,42 +20,85 @@ import {
     IconBulb,
     IconHandStop,
 } from '@tabler/icons-react';
+import ReactMarkdown from 'react-markdown';
+import rehypeRaw from 'rehype-raw';
+import { createStore } from 'redux';
+import { Provider, useSelector, useDispatch } from 'react-redux';
 import classes from './Blog.module.css';
 import article1 from '../../assets/markdowns/article1.md';
 import article2 from '../../assets/markdowns/article2.md';
 
+// Mock data for markdown files
 const blogs: { [key: string]: string } = {
     article1,
     article2,
 };
 
+// Fetch markdown helper
 const fetchMarkdown = async (path: string): Promise<string> => {
     const response = await fetch(blogs[path]);
     const text = await response.text();
     return text;
 };
 
+// Redux State Types
 interface Comment {
     name: string;
     message: string;
     time: string;
 }
 
-const Blog = () => {
-    const { slug } = useParams<{ slug: string }>();
-    const [content, setContent] = useState('');
-    const [comments, setComments] = useState<Comment[]>([]);
-    const [newComment, setNewComment] = useState('');
-    const [newName, setNewName] = useState('');
+interface BlogState {
+    reactions: { [key: string]: number };
+    comments: Comment[];
+}
 
-    // Reactions State
-    const [reactions, setReactions] = useState({
+// Initial Redux State
+const initialState: BlogState = {
+    reactions: {
         like: 0,
         heart: 0,
         dislike: 0,
         bulb: 0,
         clap: 0,
-    });
+    },
+    comments: [],
+};
+
+// Redux Reducer
+const blogReducer = (state = initialState, action: any): BlogState => {
+    switch (action.type) {
+        case 'ADD_REACTION':
+            return {
+                ...state,
+                reactions: {
+                    ...state.reactions,
+                    [action.payload]: state.reactions[action.payload] + 1,
+                },
+            };
+        case 'ADD_COMMENT':
+            return {
+                ...state,
+                comments: [...state.comments, action.payload],
+            };
+        default:
+            return state;
+    }
+};
+
+// Redux Store
+const store = createStore(blogReducer);
+
+// Blog Component
+const Blog = () => {
+    const { slug } = useParams<{ slug: string }>();
+    const [content, setContent] = useState('');
+    const [newComment, setNewComment] = useState('');
+    const [newName, setNewName] = useState('');
+
+    const reactions = useSelector((state: BlogState) => state.reactions);
+    const comments = useSelector((state: BlogState) => state.comments);
+    const dispatch = useDispatch();
 
     useEffect(() => {
         const loadMarkdown = async () => {
@@ -72,20 +113,17 @@ const Blog = () => {
         if (newComment.trim()) {
             const commentName = newName.trim() || 'Anonymous';
             const timestamp = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-            setComments((prevComments) => [
-                ...prevComments,
-                { name: commentName, message: newComment, time: timestamp },
-            ]);
+            dispatch({
+                type: 'ADD_COMMENT',
+                payload: { name: commentName, message: newComment, time: timestamp },
+            });
             setNewComment('');
             setNewName('');
         }
     };
 
-    const handleReaction = (type: keyof typeof reactions) => {
-        setReactions((prevReactions) => ({
-            ...prevReactions,
-            [type]: prevReactions[type] + 1,
-        }));
+    const handleReaction = (type: string) => {
+        dispatch({ type: 'ADD_REACTION', payload: type });
     };
 
     return (
@@ -112,51 +150,29 @@ const Blog = () => {
 
             {/* Reactions Section */}
             <div style={{ marginTop: '30px', marginBottom: '30px' }}>
-                
                 <Group mt="sm">
-                    <Tooltip label="Like" position="top" withArrow>
-                        <ActionIcon size="lg" onClick={() => handleReaction('like')}>
-                            <IconThumbUp size={24} />
-                        </ActionIcon>
-                    </Tooltip>
-                    <Text fz="sm">{reactions.like}</Text>
-
-                    <Tooltip label="Heart" position="top" withArrow>
-                        <ActionIcon size="lg" onClick={() => handleReaction('heart')}>
-                            <IconHeart size={24} />
-                        </ActionIcon>
-                    </Tooltip>
-                    <Text fz="sm">{reactions.heart}</Text>
-
-                    <Tooltip label="Dislike" position="top" withArrow>
-                        <ActionIcon size="lg" onClick={() => handleReaction('dislike')}>
-                            <IconThumbDown size={24} />
-                        </ActionIcon>
-                    </Tooltip>
-                    <Text fz="sm">{reactions.dislike}</Text>
-
-                    <Tooltip label="Bulb (Insight)" position="top" withArrow>
-                        <ActionIcon size="lg" onClick={() => handleReaction('bulb')}>
-                            <IconBulb size={24} />
-                        </ActionIcon>
-                    </Tooltip>
-                    <Text fz="sm">{reactions.bulb}</Text>
-
-                    <Tooltip label="Clap" position="top" withArrow>
-                        <ActionIcon size="lg" onClick={() => handleReaction('clap')}>
-                            <IconHandStop size={24} />
-                        </ActionIcon>
-                    </Tooltip>
-                    <Text fz="sm">{reactions.clap}</Text>
+                    {['like', 'heart', 'dislike', 'bulb', 'clap'].map((reaction) => (
+                        <React.Fragment key={reaction}>
+                            <Tooltip label={reaction} position="top" withArrow>
+                                <ActionIcon size="lg" onClick={() => handleReaction(reaction)}>
+                                    {reaction === 'like' && <IconThumbUp size={24} />}
+                                    {reaction === 'heart' && <IconHeart size={24} />}
+                                    {reaction === 'dislike' && <IconThumbDown size={24} />}
+                                    {reaction === 'bulb' && <IconBulb size={24} />}
+                                    {reaction === 'clap' && <IconHandStop size={24} />}
+                                </ActionIcon>
+                            </Tooltip>
+                            <Text fz="sm">{reactions[reaction]}</Text>
+                        </React.Fragment>
+                    ))}
                 </Group>
             </div>
 
             {/* Comments Section */}
-            <div style={{width:'100%'}}>
+            <div style={{ width: '100%' }}>
                 <Text fw={500} fz="lg">
                     Comments
                 </Text>
-                {/* Display Existing Comments */}
                 {comments.map((comment, index) => (
                     <Paper
                         withBorder
@@ -164,7 +180,6 @@ const Blog = () => {
                         className={classes.comment}
                         key={index}
                         mt="sm"
-                        
                     >
                         <Group>
                             <Avatar
@@ -206,4 +221,9 @@ const Blog = () => {
     );
 };
 
-export default Blog;
+// Wrap the Blog component with Redux Provider
+export default () => (
+    <Provider store={store}>
+        <Blog />
+    </Provider>
+);

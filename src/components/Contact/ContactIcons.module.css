@@ -1,0 +1,18 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    color: light-dark(var(--mantine-color-white), var(--mantine-color-white));
+  }
+  
+  .icon {
+    margin-right: var(--mantine-spacing-md);
+    background-color: transparent;
+  }
+  
+  .title {
+    color: light-dark(var(--mantine-color-white), var(--mantine-color-white));
+  }
+  
+  .description {
+    color: light-dark(var(--mantine-color-white), var(--mantine-color-white));
+  }

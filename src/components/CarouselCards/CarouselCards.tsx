@@ -37,26 +37,7 @@ function Card({ image, title, category, content }: CardProps) {
             {title}
           </Title>
         </div>
-        <Button variant="white" color="dark" onClick={() => setOpened(true)}>
-          Behind It
-        </Button>
       </Paper>
-
-      <Modal opened={opened} onClose={() => setOpened(false)} size="45rem">
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-          <img
-            src={image}
-            alt={title}
-            style={{ width: 'auto', maxHeight: '700px', margin: '1rem', maxWidth: '600px' }}
-          />
-          <Title order={2} style={{ marginBottom: '1rem', fontWeight: 700, fontSize: '1.5rem' }}>
-            {title}
-          </Title>
-          <Text size="sm" style={{ textAlign: 'center' }}>
-            {content}
-          </Text>
-        </div>
-      </Modal>
     </>
   );
 }
@@ -86,9 +67,52 @@ const data = [
   
 ];
 
+interface VideoCardProps {
+  video: string;
+  title: string;
+  category: string;
+  content: string;
+}
+
+function VideoCard({ video, title, category, content }: VideoCardProps) {
+  return (
+    <>
+      <Paper
+        shadow="md"
+        p="xl"
+        radius="md"
+        className={classes.videoCard}
+      >
+        <div className={classes.overlay}>
+          <Text className={classes.category} size="xs">
+            {category}
+          </Text>
+          {/* <Title order={3} className={classes.title}>
+            {title}
+          </Title> */}
+        </div>
+        <video controls className={classes.video}>
+          <source src={video} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </Paper>
+    </>
+  );
+}
+
+const videoData = [
+  {
+    video: "https://github.com/Mridulahnair/react-portfolio/raw/refs/heads/main/src/assets/Bag.mp4",
+    title: 'Business type Head Shot',
+    category: 'videography | Product Video',
+    content:
+      'In this “professional type headshot” I decided to go with a crossed arm pose with face slightly tilted towards the light to convey confidence and openness making it a well-suited picture for formal use for professional branding on a website for instance.  I used a fixed focal length of 24mm, which isn’t usually the first choice for a headshot, but I opted for it to capture a wider frame and show a bit more movement. I wanted a photo that felt natural and relaxed, while still maintaining a formal tone, rather than a traditional headshot.The aperture was set to f/1.8 to let in as much light as possible, given that this photo was taken indoors in a low-light setting. The shutter speed used was 1/10s—a slower speed to allow more light to enter. Additionally, I set the ISO to 100 to keep the image sharp and clear, despite the limited lighting ',
+
+  }
+];
+
 export function CarouselCards() {
   const theme = useMantineTheme();
-  const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`);
   const slides = data.map((item) => (
     // <Carousel.Item>
     <Card {...item} />
@@ -97,32 +121,92 @@ export function CarouselCards() {
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 2,
+      items: 1,
       slidesToSlide: 1, // optional, default to 1.
       // partialVisibilityGutter: 40 // this is needed to tell the amount of px that should be visible.
     },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 1,
+      slidesToSlide: 1,
+      partialVisibilityGutter: 30
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+      slidesToSlide: 1,
+      partialVisibilityGutter: 30
+    }
   };
+  const videoSlides = videoData.map((item) => (
+    <VideoCard {...item} />
+  ));
 
   return (
     <Container className={classes.container} size="md">
+      <div className={classes.textWrapper}>
+        <Title className={classes.textHeader}>
+          <Text
+            component="span"
+            inherit
+            variant="gradient"
+            gradient={{ from: 'pink', to: 'yellow' }}
+          >
+            My Photography
+          </Text>
+        </Title>
+      </div>
       <Carousel
         responsive={responsive}
         partialVisible={true}
         // swipeable={false}
         // draggable={false}
-        // showDots={true}
+        showDots={true}
         // ssr={true} // means to render carousel on server-side.
         infinite={true}
         autoPlay={true}
-        autoPlaySpeed={5000}
+        autoPlaySpeed={4000}
         // keyBoardControl={true}
         // customTransition="all .5"
-        // transitionDuration={500}
+        customTransition="transform 0.5s ease-in-out"
         containerClass="carousel-container"
         dotListClass="custom-dot-list-style"
         itemClass="carousel-item-padding-40-px"
       >
         {slides}
+      </Carousel>
+
+      <hr className={classes.divider}/>
+
+      <div className={classes.textWrapper}>
+        <Title className={classes.textHeader}>
+          <Text
+            component="span"
+            inherit
+            variant="gradient"
+            gradient={{ from: 'pink', to: 'yellow' }}
+          >
+            Product Videos
+          </Text>
+        </Title>
+      </div>
+      <Carousel
+        responsive={responsive}
+        // partialVisible={true}
+        // swipeable={false}
+        // draggable={false}
+        showDots={true}
+        // ssr={true} // means to render carousel on server-side.
+        // infinite={true}
+        // autoPlay={true}
+        autoPlaySpeed={4000}
+        // keyBoardControl={true}
+        // customTransition="all .5"
+        customTransition="transform 0.5s ease-in-out"
+        containerClass="carousel-container"
+        dotListClass="custom-dot-list-style"
+      >
+        {videoSlides}
       </Carousel>
     </Container>
   );
