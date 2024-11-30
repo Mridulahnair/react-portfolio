@@ -2,3 +2,72 @@
     margin-top: var(--mantine-spacing-xl);
     padding-bottom: calc(var(--mantine-spacing-xl) * 2);
 }
+
+  
+  /* Title Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .fadeIn {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .titleWrapper {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .title {
+    font-family: 'Greycliff CF', var(--mantine-font-family);
+    font-weight: 900;
+  }
+  
+  /* Left Section: Info Box */
+  .leftBox {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .infoBox {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--mantine-color-gray-0);
+  }
+  
+  .infoBox.dark {
+    background-color: var(--mantine-color-dark-7);
+  }
+  
+  .subTitle {
+    margin-bottom: 15px;
+    font-weight: 700;
+  }
+  
+  /* Right Section: Form */
+  .formWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .input {
+    margin-bottom: 15px;
+  }
+  
+  .button {
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .button:hover {
+    transform: scale(1.05);
+  }
+  

@@ -32,13 +32,13 @@ export function Work() {
   const cards = mockdata.map((article: ArticleProps) => (
     <Card
       key={article.title}
-      p="md"
-      radius="md"
+      p="lg"
+      radius="lg"
       className={classes.card}
       // onClick={() => openModal(article)}
       component="a"
       href={article.href}
-      style={{ cursor: 'pointer' }}
+      style={{ cursor: 'pointer', width:'100%', alignContent:'center' }}
         >
       <AspectRatio ratio={1920 / 1080}>
         <Image src={article.image} alt={article.title} />
@@ -54,7 +54,7 @@ export function Work() {
 
   return (
     <Container py="xl">
-      <SimpleGrid cols={{ base: 1, sm: 2 }}>{cards}</SimpleGrid>
+      <SimpleGrid style={{alignContent:'center'}} cols={{ base: 1, sm: 1 }}>{cards}</SimpleGrid>
     </Container>
   );
 }

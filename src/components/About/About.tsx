@@ -1,10 +1,11 @@
+
 import { Accordion, Container, Grid, Image, Title, Timeline, Text } from '@mantine/core';
 import { IconGitBranch, IconGitPullRequest, IconGitCommit, IconMessageDots } from '@tabler/icons-react';
 import { IconBrandHtml5, IconBrandCss3, IconBrandJavascript, IconBrandReact, IconBrandNodejs, IconBrandGit } from '@tabler/icons-react';
 import { Group, Badge, Avatar } from '@mantine/core';
 
 
-import image from '../../assets/headshot.jpg';
+import image from '../../assets/Headshot.jpg';
 import classes from './About.module.css';
 
 const charactersList = [
