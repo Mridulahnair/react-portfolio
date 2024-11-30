@@ -4,7 +4,7 @@ In this article, we will discuss the design philosophies applied to a series of 
 
 ## Design Philosophy of Headshot
 
-![Image 1](https://github.com/Mridulahnair/react-portfolio/blob/main/src/assets/Headshot.jpg?raw=true)
+![Image 1](https://github.com/Mridulahnair/react-portfolio/blob/main/src/assets/headshot.jpg?raw=true)
 
 In this “professional type headshot” I decided to go with a crossed arm pose with face slightly tilted towards the light to convey confidence and openness making it a well-suited picture for formal use for professional branding on a website for instance.
 I used a fixed focal length of 24mm, which isn’t usually the first choice for a headshot, but I opted for it to capture a wider frame and show a bit more movement. I wanted a photo that felt natural and relaxed, while still maintaining a formal tone, rather than a traditional headshot.

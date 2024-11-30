@@ -23,7 +23,7 @@ import {
 } from "@tabler/icons-react";
 import { Group, Badge, Avatar } from "@mantine/core";
 
-import image from "../../assets/Headshot.jpg";
+import image from "../../assets/headshot.jpg";
 import classes from "./About.module.css";
 
 const charactersList = [
