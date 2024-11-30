@@ -1,13 +1,13 @@
-import { useState } from 'react';
-import { Burger, Container, Group, Image } from '@mantine/core';
-import { useDisclosure } from '@mantine/hooks';
-import classes from './Navbar.module.css';
+import { useState } from "react";
+import { Burger, Container, Group, Image } from "@mantine/core";
+import { useDisclosure } from "@mantine/hooks";
+import classes from "./Navbar.module.css";
 
 const links = [
-  { link: '/react-portfolio/#about', label: 'About' },
-  { link: '/react-portfolio/#work', label: 'Blog' },
-  { link: '/react-portfolio/#gallery', label: 'Gallery' },
-  { link: '/react-portfolio/#contact', label: 'Contact' },
+  { link: "/react-portfolio/#about", label: "About" },
+  { link: "/react-portfolio/#work", label: "Blog" },
+  { link: "/react-portfolio/#gallery", label: "Gallery" },
+  { link: "/react-portfolio/#contact", label: "Contact" },
 ];
 
 export function Navbar() {

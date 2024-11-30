@@ -1,6 +1,15 @@
-import { Button, Container, Group, Paper, SimpleGrid, Text, Textarea, TextInput } from '@mantine/core';
-import { ContactIconsList } from './ContactIcons';
-import classes from './Contact.module.css';
+import {
+  Button,
+  Container,
+  Group,
+  Paper,
+  SimpleGrid,
+  Text,
+  Textarea,
+  TextInput,
+} from "@mantine/core";
+import { ContactIconsList } from "./ContactIcons";
+import classes from "./Contact.module.css";
 
 export function Contact() {
   return (
@@ -15,7 +24,10 @@ export function Contact() {
             <ContactIconsList />
           </div>
 
-          <form className={classes.form} onSubmit={(event) => event.preventDefault()}>
+          <form
+            className={classes.form}
+            onSubmit={(event) => event.preventDefault()}
+          >
             <Text fz="lg" fw={700} className={classes.title}>
               Get in touch
             </Text>
@@ -23,10 +35,19 @@ export function Contact() {
             <div className={classes.fields}>
               <SimpleGrid cols={{ base: 1, sm: 2 }}>
                 <TextInput label="Your name" placeholder="Your name" />
-                <TextInput label="Your email" placeholder="hello@mantine.dev" required />
+                <TextInput
+                  label="Your email"
+                  placeholder="hello@mantine.dev"
+                  required
+                />
               </SimpleGrid>
 
-              <TextInput mt="md" label="Subject" placeholder="Subject" required />
+              <TextInput
+                mt="md"
+                label="Subject"
+                placeholder="Subject"
+                required
+              />
 
               <Textarea
                 mt="md"
