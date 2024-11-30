@@ -31,8 +31,12 @@ export function Contact() {
   return (
     <Container size="lg" className={classes.container}>
       {/* Title */}
-      <div className={classes.titleWrapper}>
-        <Title order={2} size="h1" className={classes.title}>
+      <div className={`${classes.fadeIn} ${classes.titleWrapper}`}>
+        <Title
+          order={2}
+          size="h1"
+          className={classes.title}
+        >
           Get in touch
         </Title>
       </div>
@@ -41,7 +45,7 @@ export function Contact() {
       <Grid gutter="lg">
         {/* Left Column: Contact Info Box */}
         <Grid.Col span={{ base: 12, sm: 6 }}>
-          <div className={classes.leftBox}>
+          <div className={`${classes.fadeIn} ${classes.leftBox}`}>
             <Box className={classes.infoBox}>
               <Stack spacing="md">
                 <Title order={3} size="h2" className={classes.subTitle}>
@@ -70,7 +74,7 @@ export function Contact() {
 
         {/* Right Column: Contact Form */}
         <Grid.Col span={{ base: 12, sm: 6 }}>
-          <div className={classes.formWrapper}>
+          <div className={`${classes.fadeIn} ${classes.formWrapper}`}>
             <form onSubmit={form.onSubmit(() => {})}>
               <TextInput
                 label="Name"
